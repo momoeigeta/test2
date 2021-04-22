@@ -1,9 +1,16 @@
-p.sub-title1{
+p.sub-title1 {
     color: aqua;
-p#sub-title2{
+}
+p#sub-title2 {
     color: pink;
 
 }
+.company{
+    font-weight: bold;
+    font-size: larger;
+
+}
+
 h1{
     color: red;
     font-size: 50pt;
