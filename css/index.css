@@ -16,3 +16,22 @@ h1{
     font-size: 50pt;
     font-weight: bold;
 }
+div.box1{
+    height: 100px;
+    width: 100px;
+    background-color: royalblue;
+    text-align: center;
+    border-radius: 50% 50% 50% 50%;
+    left: auto ;
+    top: auto;
+}    
+div.box2{
+    height: 100px;
+    width: 100px;
+    background-color: mediumaquamarine;
+}    
+div.box3{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+}    
