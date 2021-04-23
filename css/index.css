@@ -15,23 +15,34 @@ h1{
     color: red;
     font-size: 50pt;
     font-weight: bold;
+
 }
-div.box1{
+.box1{
     height: 100px;
     width: 100px;
     background-color: royalblue;
     text-align: center;
-    border-radius: 50% 50% 50% 50%;
-    left: auto ;
-    top: auto;
+    border-radius: 50% 50% 0% 50%;
 }    
-div.box2{
+.box2{
     height: 100px;
     width: 100px;
     background-color: mediumaquamarine;
+    text-align: center;
+    border-radius: 50% 50% 50% 0%;
 }    
-div.box3{
+.box3{
     height: 100px;
     width: 100px;
     background-color: yellow;
+    text-align: center;
+    border-radius: 50% 0% 50% 50%;
 }    
+.box4{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(226, 21, 165);
+    text-align: center;
+    border-radius: 0% 50% 50% 50%;
+}    
+</style>
