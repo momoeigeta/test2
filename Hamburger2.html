@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HumburgerMenu1</title>
+    <title>HumburgerMenu2</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <style type="text/css">
     body {
      padding: 0px;
      margin: 0px;
      font-family: Verdana, Geneva, Tahoma, sans-serif;
+     overflow-x: hidden;
     }
     #main {
         background-color: #eee;
@@ -18,36 +19,52 @@
         height: 100%;
         position: absolute;
         top: 0;
-        left: 0;
+        left: 20px;
         padding: 8px;
-        z-index: 2;
+        margin-left: 0px;
+        z-index: 1;
         overflow: auto;
         box-sizing: border-box;
-        transition: .4s;
     }
+    #cover {
+        background-color: #000;
+        opacity: .6;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        z-index: 2;
+        }
     #menu {
         background-color: #4c80ee;
         color: #fff;
         position: absolute;
         top: 0;
-        right: 0;
+        left: -160px;
         padding: 8px;
         width: 180px;
         min-height: 100%;
-        z-index: 1;
+        z-index: 3;
         box-sizing: border-box;
+        transition: .4s;
     }
-    #open {
-        float: right;
+    #open, #close {
+        float: left;
         cursor: pointer;
     }
-    #main.menu-open {
-        left: -180px;
+    #cover.menu-open {
+        display: block;
+    }
+    #menu.menu-open {
+        left: 0;
     }
     </style>
 </head>
 <body>
     <div id="menu">
+        <!-- <i class="fa fa-times" id="close"></i> -->
         <ul>
             <li>Menu1</li>
             <li>Menu2</li>
@@ -57,7 +74,7 @@
         </ul>
     </div>
     <div id="main">
-        <i class="fa fa-bars" id="open"></i>
+        <!-- <i class="fa fa-bars" id="open"></i> -->
         <h1>Hello</h1>
         <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
         <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
@@ -78,19 +95,34 @@
         <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
         <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
     </div>
+    <div id="cover"></div>
     <script>
         `use strict`;
 
-        const open = document.getElementById(`open`);
-        const main = document.getElementById(`main`);
+        // const open = document.getElementById(`open`);
+        // const close = document.getElementById(`close`);
+        const menu = document.getElementById(`menu`);
+        const cover = document.getElementById(`cover`);
 
-        document.getElementById(`open`).addEventListener(`click`,() => {
-            if (main.className === `menu-open`){
-                main.className = ``;
-             } else {
-                    main.className = `menu-open`;
-                }
-            });
+        menu.addEventListener(`mouseover`,() => {
+            menu.className = `menu-open`;
+            cover.className = `menu-open`;
+        });
+
+        menu.addEventListener(`mouseleave`,() => {
+            menu.className = '';
+            cover.className = '';
+        });
+
+        // open.addEventListener(`click`,() => {
+        //     menu.className = `menu-open`;
+        //     cover.className = `menu-open`;
+        // });
+
+        // close.addEventListener(`click`,() => {
+        //     menu.className = '';
+        //     cover.className = '';
+        // });
     </script>
 </body>
 </html>
