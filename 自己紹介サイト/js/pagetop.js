@@ -1,43 +1,28 @@
-
-
-
-
-
-
-const fm_hasClass = (e, c) => {
-    let classes = e.className;
-    if (!classes) return false;
-    if (classes === c) return true;
-    return classes.search("\\b" + c + "\\b") != -1;
-}
-const fm_addClass = (e, c) => {
-    if (fm_hasClass(e, c)) return;
-    let classes = e.className;
-    if (classes && classes[classes.length-1] != " ")
-        c = " " + c;
-    e.className += c;
-}
-const fm_removeClass = (e, c) => {
-    let pattern = new RegExp("\\b" + c + "\\b\\s*", "g");
-    e.className = e.className.replace(pattern, "");
-}
-const fm_addEvent = (elm,listener,fn) => {
-	try{
-		elm.addEventListener(listener,fn,false);
-	}catch(e){
-		elm.attachEvent("on"+listener,fn);
+// スクロールして何ピクセルでアニメーションさせるか
+let px_change = 1;
+// スクロールのイベントハンドラを登録
+window.addEventListener('scroll', function(e) {
+	// 変化するポイントまでスクロールしたらクラスを追加
+	let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	if ( scrollTop > px_change ) {
+		document.getElementById( "btn-backtotop" ).classList.add( "fadein" );
+ 
+	// 変化するポイント以前であればクラスを削除
+	} else {
+		document.getElementById( "btn-backtotop" ).classList.remove( "fadein" );
 	}
-}
-fm_addEvent(window, 'load', function() {
-   let offsettop;
-   offsettop = 350;
-   fm_addEvent(window, 'scroll', function() {
-   if (offsettop < Math.max(document.body.scrollTop,document.documentElement.scrollTop)) {
-       fm_addClass(document.body, 'is-fixed-pagetop');
-   } if ((offsettop - 50) > Math.max(document.body.scrollTop,document.documentElement.scrollTop)) {
-       fm_removeClass(document.body, 'is-fixed-pagetop');
-   }
- });
 });
+ 
 
-
+//文字数制限
+const test = document.getElementById("test");
+const validation = document.getElementById('validation');
+function check() {
+	const value = test.value.replace(/\n/g, "") /*すべての改行コードが空文字に変わり、文字数としてカウントされなくなる。*/
+	if (value.length < 5) {
+		alert("5文字以上入力してください。")
+	}
+	else {
+		validation.innerText = ""
+	};
+};

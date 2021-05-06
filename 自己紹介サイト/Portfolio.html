@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>井桁百絵 自己紹介ホームページ</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/pagetop.js"></script>
 
 </head>
 
@@ -63,12 +62,6 @@
    <h2>Message</h2>
     <p class="m">メッセージがありましたら、以下のフォームよりお送りください。</P>
      <div class="Form">
-        <!-- <div class="Form-Item"> -->
-          <!-- <p class="Form-Item-Label">
-            <span class="Form-Item-Label-Required">必須</span>会社名
-          </p> -->
-          <!-- <input type="text" class="Form-Item-Input" placeholder="例）株式会社令和">
-        </div> -->
         <div class="Form-Item">
           <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>お名前</p>
           <input type="text" class="Form-Item-Input" placeholder="例）山田太郎">
@@ -83,9 +76,10 @@
         </div>
         <div class="Form-Item">
          <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
-          <textarea class="Form-Item-Textarea"></textarea>
+          <textarea class="Form-Item-Textarea" id="test" placeholder="5文字以上" onChange="check()"></textarea>
+          <p id="validation"></p>
         </div>
-        <input type="submit" class="Form-Btn" value="Submit">
+        <input type="submit" class="Form-Btn" value="Submit"　onClick="check()">
     </section>
 
      <section id="contact">
@@ -93,8 +87,8 @@
        <p>momoe.igeta@force-corp.co.jp</p>
      </section> 
     </div>
-
-      <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+    <a href="#top" id="btn-backtotop">↑</a>
+      <script src="js/pagetop.js"></script>
 
 </body>
 </html>

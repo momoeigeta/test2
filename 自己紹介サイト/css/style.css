@@ -14,9 +14,7 @@ body {
 }
 h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
 ul {list-style-type: none;}
-/* ol {padding-left: 40px;padding-bottom: 15px;} */
 img {border: thick double  #5fb3f5;max-width: 100%;height: auto;vertical-align: middle; border-radius: 50%;}
-/* table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}  */
 iframe {width: 100%;}
 
 @keyframes opa1 {
@@ -160,7 +158,7 @@ dd {
 	padding-left: 9em;
 }
 
-
+/*入力フォーム*/
 .Form {
 	margin-top: 80px;
 	margin-left: auto;
@@ -271,6 +269,7 @@ dd {
 	max-width: 410px;
 	background: #eaedf2;
 	font-size: 18px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   }
   @media screen and (max-width: 480px) {
 	.Form-Item-Textarea {
@@ -306,23 +305,33 @@ dd {
 	}
   }
   
-/*PAGE TOP（↑）設定
----------------------------------------------------------------------------*/
-body .nav-fix-pos-pagetop a {
-	display: none;
-}
-body.is-fixed-pagetop .nav-fix-pos-pagetop a {
-	display: block;text-decoration: none;text-align: center;position: fixed;animation-name: opa1;animation-duration: 1s;animation-fill-mode: forwards;
-	width: 50px;		/*ボタンの幅*/
-	line-height: 50px;	/*ボタンの高さ*/
-	bottom: 50px;		/*画面の下からの配置場所指定*/
-	right: 3%;			/*画面の右からの配置場所指定*/
-	background: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒の事で、0.5は色が50%出た状態の事。*/
-	color: #fff;		/*文字色*/
-	border-radius: 50%;	/*円形にする指定。この１行を削除すると正方形になります。*/
-}
-body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
-	background: #999;	/*マウスオン時の背景色*/
-}
 
+/*PAGE TOP（↑）設定*/
+
+#btn-backtotop{
+display: block;
+text-decoration: none;
+text-align: center;
+position: fixed;
+/*animation-name: opa1;*/
+animation-duration: 1s;
+animation-fill-mode: forwards;
+width: 60px;		/*ボタンの幅*/
+line-height: 60px;	/*ボタンの高さ */
+bottom: 50px;		/*画面の下からの配置場所指定*/
+right: 3%;			/*画面の右からの配置場所指定*/
+background: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒の事で、0.5は色が50%出た状態の事。*/
+color: #fff;		/*文字色*/
+border-radius: 50%;	/*円形にする指定。この１行を削除すると正方形になります。*/
+opacity: 0; 
+@media screen and (max-width:767px){
+	bottom: 10px;
+	right: 5px;
+}}
+#btn-backtotop:hover {
+background: #999;	/*マウスオン時の背景色*/
+} 
+#btn-backtotop.fadein {
+	opacity: 1;
+}
 
