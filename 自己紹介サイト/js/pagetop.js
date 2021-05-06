@@ -26,3 +26,7 @@ function check() {
 		validation.innerText = ""
 	};
 };
+
+
+
+
