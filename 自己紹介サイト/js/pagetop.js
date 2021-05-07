@@ -1,15 +1,10 @@
-// スクロールして何ピクセルでアニメーションさせるか
-let px_change = 1;
-// スクロールのイベントハンドラを登録
-window.addEventListener('scroll', function(e) {
-	// 変化するポイントまでスクロールしたらクラスを追加
-	let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+let px_change = 1;  // スクロールして何ピクセルでアニメーションさせるか
+window.addEventListener('scroll', function(e) {  // スクロールのイベントハンドラを登録
+	let scrollTop = window.pageYOffset || document.documentElement.scrollTop;  	// 変化するポイントまでスクロールしたらクラスを追加
 	if ( scrollTop > px_change ) {
 		document.getElementById( "btn-backtotop" ).classList.add( "fadein" );
- 
-	// 変化するポイント以前であればクラスを削除
 	} else {
-		document.getElementById( "btn-backtotop" ).classList.remove( "fadein" );
+		document.getElementById( "btn-backtotop" ).classList.remove( "fadein" );  	// 変化するポイント以前であればクラスを削除
 	}
 });
  
@@ -23,10 +18,19 @@ function check() {
 		alert("5文字以上入力してください。")
 	}
 	else {
-		validation.innerText = ""
-	};
+		return true;
+	}
 };
 
 
-
-
+var navPos = jQuery( '#menubar' ).offset().top; // グローバルメニューの位置
+var navHeight = jQuery( '#menubar' ).outerHeight(); // グローバルメニューの高さ
+jQuery( window ).on( 'scroll', function() {
+  if ( jQuery( this ).scrollTop() > navPos ) {
+    jQuery( 'body' ).css( 'padding-top', navHeight );
+    jQuery( '#menubar' ).addClass( 'm_fixed' );
+  } else {
+    jQuery( 'body' ).css( 'padding-top', 0 );
+    jQuery( '#menubar' ).removeClass( 'm_fixed' );
+  }
+});

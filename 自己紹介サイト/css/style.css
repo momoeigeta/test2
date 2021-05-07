@@ -12,7 +12,7 @@ body {
 	background: #faf7f3;	/*背景色*/
 	-webkit-text-size-adjust: 100%;
 }
-h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+h1,h2,p,ul,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
 ul {list-style-type: none;}
 img {border: thick double  #5fb3f5;max-width: 100%;height: auto;vertical-align: middle; border-radius: 50%;}
 iframe {width: 100%;}
@@ -30,7 +30,7 @@ a {
 }
 a:hover {
 	color: #ff4765;			/*マウスオン時の文字色 */
-	text-decoration: none;	/*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
+	text-decoration: none;	/*マウスオン時に下線を消す設定。*/
 }
 
 /*ヘッダー（一番上の、ロゴやメニューが入っているブロック）
@@ -39,22 +39,16 @@ header {
 	height: 100%;
 	overflow: auto;
 	position: relative;
-	/*background: #ea96a3;	/*背景色*/
-	background: radial-gradient(#F2B9A1, #ea96a3) fixed;
+	background: radial-gradient(#ea96a3,#8fd2ed) fixed;
 }
-	/* background: #ee9ca7;  /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to right, #ffdde1, #ee9ca7); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
 header #name {
 	text-align: center;
 	margin: 80px;
 	font-size: 25px;
 	color: #fff;	/*文字色*/
 	animation-name: opa1;
-	animation-delay: 0.8S;
-	animation-duration: 0.8S;
+	animation-delay: 0.7S;
+	animation-duration: 0.7S;
 	animation-fill-mode: both;
 
 }
@@ -66,10 +60,12 @@ header #logo img {
 	left: 40%;		/*ロゴやメニューが入っているブロックに対して、左からの配置場所の指定。*/
 	bottom: 40%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
 	animation-name: opa1;
-	animation-delay: 0.8S;
-	animation-duration: 0.8S;
+	animation-delay: 0.6S;
+	animation-duration: 0.6S;
 	animation-fill-mode: both;
 }
+
+
 
 /*メニューブロック全体への指定*/
 #menubar {
@@ -80,6 +76,23 @@ header #logo img {
 	text-align: center;
 	font-size: 20px;
 }
+
+#menubar.m_fixed {
+	left: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: rgba(250, 161, 195, 0.9);        
+	opacity: 0.6;
+    -webkit-transition: all .4s ease 0s,background .6s ease .2s;
+    transition: all .4s ease 0s,background .6s ease .2s;
+    -webkit-overflow-scrolling: touch;
+    height: 35px;
+}
+  
+
 /*メニュー１個あたりの指定*/
 #menubar li {
 	display: inline-block;
