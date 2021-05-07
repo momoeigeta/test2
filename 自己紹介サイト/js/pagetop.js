@@ -1,3 +1,5 @@
+`use strict`;
+
 let px_change = 1;  // スクロールして何ピクセルでアニメーションさせるか
 window.addEventListener('scroll', function(e) {  // スクロールのイベントハンドラを登録
 	let scrollTop = window.pageYOffset || document.documentElement.scrollTop;  	// 変化するポイントまでスクロールしたらクラスを追加
@@ -12,7 +14,7 @@ window.addEventListener('scroll', function(e) {  // スクロールのイベン�
 //文字数制限
 const test = document.getElementById("test");
 const validation = document.getElementById('validation');
-function check() {
+const check =() => {
 	const value = test.value.replace(/\n/g, "") /*すべての改行コードが空文字に変わり、文字数としてカウントされなくなる。*/
 	if (value.length < 5) {
 		alert("5文字以上入力してください。")

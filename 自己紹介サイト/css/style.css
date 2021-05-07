@@ -67,6 +67,7 @@ header #logo img {
 
 
 
+
 /*メニューブロック全体への指定*/
 #menubar {
 	position: absolute;
@@ -74,7 +75,7 @@ header #logo img {
 	left: 0px;
 	width: 100%;
 	text-align: center;
-	font-size: 20px;
+	font-size: 25px;
 }
 
 #menubar.m_fixed {
@@ -89,7 +90,7 @@ header #logo img {
     -webkit-transition: all .4s ease 0s,background .6s ease .2s;
     transition: all .4s ease 0s,background .6s ease .2s;
     -webkit-overflow-scrolling: touch;
-    height: 35px;
+    height: 40px;
 }
   
 
@@ -338,16 +339,16 @@ width: 60px;		/*ボタンの幅*/
 line-height: 60px;	/*ボタンの高さ */
 bottom: 50px;		/*画面の下からの配置場所指定*/
 right: 3%;			/*画面の右からの配置場所指定*/
-background: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒の事で、0.5は色が50%出た状態の事。*/
+background: rgba(30, 163, 204, 0.5);	/*背景色。0.5は色が50%出た状態の事。*/
 color: #fff;		/*文字色*/
-border-radius: 50%;	/*円形にする指定。この１行を削除すると正方形になります。*/
+border-radius: 50%;	/*円形にする指定。*/
 opacity: 0; 
 @media screen and (max-width:767px){
 	bottom: 10px;
 	right: 5px;
 }}
 #btn-backtotop:hover {
-background: #999;	/*マウスオン時の背景色*/
+background: rgb(236, 166, 207,0.9);	/*マウスオン時の背景色*/
 } 
 #btn-backtotop.fadein {
 	opacity: 1;
