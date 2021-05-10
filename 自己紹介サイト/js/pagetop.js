@@ -1,5 +1,6 @@
 `use strict`;
 
+//トップページボタン
 let px_change = 1;  // スクロールして何ピクセルでアニメーションさせるか
 window.addEventListener('scroll', function(e) {  // スクロールのイベントハンドラを登録
 	let scrollTop = window.pageYOffset || document.documentElement.scrollTop;  	// 変化するポイントまでスクロールしたらクラスを追加
@@ -9,7 +10,6 @@ window.addEventListener('scroll', function(e) {  // スクロールのイベン�
 		document.getElementById( "btn-backtotop" ).classList.remove( "fadein" );  	// 変化するポイント以前であればクラスを削除
 	}
 });
- 
 
 //文字数制限
 const test = document.getElementById("test");
@@ -24,9 +24,9 @@ const check =() => {
 	}
 };
 
-
-var navPos = jQuery( '#menubar' ).offset().top; // グローバルメニューの位置
-var navHeight = jQuery( '#menubar' ).outerHeight(); // グローバルメニューの高さ
+//メニューバー固定
+let navPos = jQuery( '#menubar' ).offset().top; // グローバルメニューの位置
+let navHeight = jQuery( '#menubar' ).outerHeight(); // グローバルメニューの高さ
 jQuery( window ).on( 'scroll', function() {
   if ( jQuery( this ).scrollTop() > navPos ) {
     jQuery( 'body' ).css( 'padding-top', navHeight );
@@ -38,29 +38,19 @@ jQuery( window ).on( 'scroll', function() {
 });
 
 
-
-
-
-
-
-/*------------------------
-canvas要素の取得と設定
--------------------------*/
 //canvas要素の取得
-var canvas = document.getElementById('canvas'); //canvasを取得
-var ctx = canvas.getContext('2d'); //canvasのコンテキストを取得
+let canvas = document.getElementById('canvas'); //canvasを取得
+let ctx = canvas.getContext('2d'); //canvasのコンテキストを取得
 
 //canvasサイズの設定
-var wd_width = window.innerWidth; //ウィンドウ幅をキャンバス幅に。
-var wd_height = window.innerHeight; //ウィンドウ高をキャンバス高に。
+let wd_width = window.innerWidth; //ウィンドウ幅をキャンバス幅に。
+let wd_height = window.innerHeight; //ウィンドウ高をキャンバス高に。
 
 ctx.canvas.width = wd_width;
 ctx.canvas.height = wd_height;
 
-/*------------------------------------------------
-ループ処理「requestAnimFrame」のベンダープレフィクス
--------------------------------------------------*/
-var animFrame = window.requestAnimationFrame ||
+//ループ処理「requestAnimFrame」のベンダープレフィクス
+let animFrame = window.requestAnimationFrame ||
   window.webkitRequestAnimationFrame ||
   window.mozRequestAnimationFrame ||
   window.oRequestAnimationFrame ||
@@ -69,35 +59,25 @@ var animFrame = window.requestAnimationFrame ||
     window.setTimeout(callback, 1000 / 60);
   };
 
-/*------------------------
-canvasサイズを可変にする
--------------------------*/
-
-function canvas_resize() {
-  var rswd_width = window.innerWidth;
-  var rswd_height = window.innerHeight;
+//canvasサイズを可変にする
+const canvas_resize = () => {
+  let rswd_width = window.innerWidth;
+  let rswd_height = window.innerHeight;
 
   canvas.setAttribute('width', rswd_width);
   canvas.setAttribute('height', rswd_height);
 }
-//リサイズイベントを拾って実行
- /*window.addEventListener('resize', canvas_resize, false);
- canvas_resize();
 
-
-/*------------------------
-乱数
-min から max までの乱整数を返す関数
-Math.round() を用いると、非一様分布になります
--------------------------*/
-function getRandomInt(min, max) {
+//乱数
+//min から max までの乱整数を返す関数
+//Math.round() を用いると、非一様分布になる
+const getRandomInt =(min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 
-/*------------------------
-雪の設定
--------------------------*/
+//雪の設定
+
 // 雪の粒を保存する配列
 const snows = [];
 
@@ -110,16 +90,16 @@ class snow {
 		this.speed = getRandomInt(1, 3); //落下速度
 		this.wind = getRandomInt(0, 0.5); //横風の強さ
 	}
-	// 雪の粒の描画
-	draw() {
-		var snow_grad = ctx.createRadialGradient(
-			this.position_x,
-			this.position_y,
-			this.snow_size * 0.6,
-			this.position_x,
-			this.position_y,
-			this.snow_size
-		);
+// 雪の粒の描画
+draw() {
+	let snow_grad = ctx.createRadialGradient(
+		this.position_x,
+		this.position_y,
+		this.snow_size * 0.6,
+		this.position_x,
+		this.position_y,
+		this.snow_size
+	);
 		/* グラデーション終点のオフセットと色をセット */
 		snow_grad.addColorStop(0, 'rgba(225, 225, 225, 0.8)');
 		snow_grad.addColorStop(0.5, 'rgba(225, 225, 225, 0.2)');
@@ -144,34 +124,33 @@ class snow {
 
 
 // 雪の粒の密度(雪の量)
-function snow_density(snow_count) {
-  for (var num = 0; num < snow_count; num++) {
+const snow_density =(snow_count) => {
+  for (let num = 0; num < snow_count; num++) {
     snows[num] = new snow();
   }
 }
 
 
 
-/*------------------------
-雪を降らす処理
--------------------------*/
+//雪を降らす処理
+
 //雪の粒を描画する
-function snow_draw() {
+const snow_draw =() => {
   ctx.clearRect(0, 0, wd_width, wd_height);
-  for (var num = 0; num < snows.length; num++) {
+  for (let num = 0; num < snows.length; num++) {
     snows[num].draw();
   }
 }
 
 //雪の粒の座標を更新する
-function snow_move() {
-  for (var num = 0; num < snows.length; num++) {
+const snow_move =() => {
+  for (let num = 0; num < snows.length; num++) {
     snows[num].move();
   }
 }
 
 //ループ処理
-function snowy() {
+const snowy =() => {
   snow_draw();
   snow_move();
   animFrame(snowy);

@@ -14,38 +14,32 @@ body {
 }
 h1,h2,p,ul,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
 ul {list-style-type: none;} /*リストのマーカーが表示されない*/
-img {border: thick double  #5fb3f5;max-width: 100%;height: auto;vertical-align: middle; border-radius: 50%;}
+img {border: thick double  #5fb3f5;max-width: 100%;height: auto;vertical-align: middle; border-radius: 50%;} /*イメージの枠*/
 iframe {width: 100%;}
 
 @keyframes opa1 {
 0% {opacity: 0;}
 100% {opacity: 1;}
 } 
-
 @keyframes floating {
-	0% {
-		transform: translate(0,0px);
-	}
-
-	100% {
-		transform: translate(0,-15px)
-	}
+0% {transform: translate(0,0px);}
+100% {transform: translate(0,-15px);}
 }
 
 
-/*リンク（全般）設定
----------------------------------------------------------------------------*/
+/*リンク（全般）設定*/
+
 a {
 	color: #776955;		/*リンクテキストの色*/
 	transition: 0.5s;	/*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
 }
 a:hover {
-	color: #ff4765;			/*マウスオン時の文字色 */
+	color: #ff47c2;			/*マウスオン時の文字色 */
 	text-decoration: none;	/*マウスオン時に下線を消す設定。*/
 }
 
-/*ヘッダー（一番上の、ロゴやメニューが入っているブロック）
----------------------------------------------------------------------------*/
+/*ヘッダー（一番上の、ロゴやメニューが入っているブロック）*/
+
 header {
 	height: 100%;
 	overflow:hidden;
@@ -63,6 +57,7 @@ header #name {
 	animation-fill-mode: both;
 
 }
+
 /*ロゴ画像*/
 
 header #logo img {
@@ -73,25 +68,16 @@ header #logo img {
 	bottom: 40%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
 	animation-name: opa1,floating;
 	animation-delay: 0.6S;
-	/*animation-duration: 0.6S;*/
 	animation-fill-mode: both;
 
     animation-timing-function: ease-in-out;
 	animation-iteration-count: 1,infinite;
 	animation-direction: alternate;
 	animation-duration: 0.6s,1.5s;
-	  }
-
-	
-
-  
-
-
-
-
-
+}
 
 /*メニューブロック全体への指定*/
+
 #menubar {
 	position: absolute;
 	bottom: 20%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
@@ -115,9 +101,9 @@ header #logo img {
     -webkit-overflow-scrolling: touch;
     height: 42px;
 }
-  
 
 /*メニュー１個あたりの指定*/
+
 #menubar li {
 	display: inline-block;
 	margin: 0 1%;
@@ -136,19 +122,18 @@ header #logo img {
 /*マウスオン時の指定*/
 #menubar li a:hover {
 	border-bottom: 2px solid #fff;	/*下線の幅、線種、色*/
-	letter-spacing: 3px;			/*文字間隔を少しだけ広くする指定。そのままがいいならこの１行を削除。*/
+	letter-spacing: 3px;			/*文字間隔を少しだけ広くする指定。*/
 }
 
+/*コンテナー（headerとfooterをのぞくブロックを囲むブロック）*/
 
-/*コンテナー（headerとfooterをのぞくブロックを囲むブロック）
----------------------------------------------------------------------------*/
 #container { 
-	 max-width: 1400px;	/*最大幅。これ以上広くならない指定。 */
+	 max-width: 1400px;	/*最大幅。これ以上広くならない指定。*/
 	 margin: 0 auto; 
 } 
 
-/*コンテンツ（上のcontainerの中のブロック）
----------------------------------------------------------------------------*/
+/*コンテンツ（上のcontainerの中のブロック）*/
+
 #contents {
 	overflow: hidden;
 	padding: 50px 3%;
@@ -158,6 +143,7 @@ header #logo img {
 }
 
 /*コンテンツ内にあるh2(見出し)タグの指定*/
+
 #contents h2 {
 	margin-bottom: 20px;
 	clear: both;
@@ -167,10 +153,11 @@ header #logo img {
 	letter-spacing: 2px;	/*文字間隔を少しだけ広くする指定*/
 	background: #ea96a3;	/*背景色*/
 	color: #fff;			/*文字色*/
-	border-radius: 100px;	/*角を丸くする指定。大きめであれば適当で構いません。*/
+	border-radius: 100px;	/*角を丸くする指定。*/
 }
 
 /*コンテンツ内にあるp(段落)タグ設定*/
+
 #contents p {
 	padding: 0px 20px 10px;	/*上、左右、下への余白*/
 }
@@ -182,25 +169,29 @@ header #logo img {
 	margin-top: -10px;
 }
 
-/*トップページ内「更新情報・お知らせ」ブロック
----------------------------------------------------------------------------*/
 /*ブロック全体の設定*/
+
 dl {
 	padding-left: 20px;
 	margin-bottom: 15px;
 }
-/*日付設定*/
+
+/*見だし*/
+
 dt {
 	float: left;
 	width: 9em;
 	letter-spacing: 0.1em;
 }
-/*記事設定*/
+
+/*見出しの内容*/
+
 dd {
 	padding-left: 9em;
 }
 
 /*入力フォーム*/
+
 .Form {
 	margin-top: 80px;
 	margin-left: auto;
@@ -355,7 +346,6 @@ display: block;
 text-decoration: none;
 text-align: center;
 position: fixed;
-/*animation-name: opa1;*/
 animation-duration: 1s;
 animation-fill-mode: forwards;
 width: 60px;		/*ボタンの幅*/
