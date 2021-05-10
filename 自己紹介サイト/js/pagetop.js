@@ -60,7 +60,7 @@ let animFrame = window.requestAnimationFrame ||
   };
 
 //canvasサイズを可変にする
-const canvas_resize = () => {
+const canvas_resize =() => {
   let rswd_width = window.innerWidth;
   let rswd_height = window.innerHeight;
 
