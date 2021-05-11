@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// eslint-disable-next-line
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CounterApp from './CounterApp';
+// import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <CounterApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
