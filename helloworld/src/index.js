@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// eslint-disable-next-line
 import App from './App';
+
 import reportWebVitals from './reportWebVitals';
-import CounterApp from './CounterApp';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from "history";
+// import App from './Slide';
 // import * as serviceWorker from './serviceWorker';
 
+const hist = createBrowserHistory();
+
 ReactDOM.render(
-  <React.StrictMode>
-    {/* <App /> */}
-    <CounterApp />
-  </React.StrictMode>,
+  <Router history={hist}>
+    <App />
+  </Router>,
   document.getElementById('root')
 );
 
