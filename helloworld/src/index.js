@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import GetData from './GetData';
 
 import reportWebVitals from './reportWebVitals';
 import { Router } from 'react-router-dom';
@@ -13,6 +14,7 @@ const hist = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={hist}>
+    <GetData />
     <App />
   </Router>,
   document.getElementById('root')
