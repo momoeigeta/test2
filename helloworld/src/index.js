@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// eslint-disable-next-line
 import App from './App';
+// eslint-disable-next-line
 import GetData from './GetData';
+import FrontC from './frontC';
 
 import reportWebVitals from './reportWebVitals';
 import { Router } from 'react-router-dom';
@@ -14,8 +17,9 @@ const hist = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={hist}>
-    <GetData />
-    <App />
+    <FrontC />
+    {/* <GetData /> */}
+    {/* <App /> */}
   </Router>,
   document.getElementById('root')
 );
