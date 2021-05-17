@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // eslint-disable-next-line
-import App from './App';
+import App from './views/App';
 // eslint-disable-next-line
 import GetData from './GetData';
+// eslint-disable-next-line
 import FrontC from './frontC';
 
 import reportWebVitals from './reportWebVitals';
@@ -12,6 +13,7 @@ import { Router } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 // import App from './Slide';
 // import * as serviceWorker from './serviceWorker';
+import Sidebar from './Sidebar';
 
 const hist = createBrowserHistory();
 
@@ -20,6 +22,7 @@ ReactDOM.render(
     <FrontC />
     {/* <GetData /> */}
     {/* <App /> */}
+    <Sidebar />
   </Router>,
   document.getElementById('root')
 );

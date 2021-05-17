@@ -46,12 +46,3 @@ export default App;
 
 
 
-{current_data.map((data) => (
-            <answer key={data.contents_detail_id}
-             answer={current_answer}
-             choice1={current_choice1}
-             choice2={current_choice2}
-             choice3={current_choice3}
-             choice4={current_choice4}
-             />
-))}

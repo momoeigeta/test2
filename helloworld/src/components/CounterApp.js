@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CounterApp.css';
+import '../CSS/CounterApp.css';
 
 const Counter = (props) => {
     const [count, setCount] = useState(0);
@@ -14,13 +14,11 @@ const Counter = (props) => {
     );
 }
 
-const CounterApp = () => {
+const CounterApp = (props) => {
     return (
         <div className="container">
             <ul>
-                <li><Counter color="tomato" /></li>
-                <li><Counter color="skyblue" /></li>
-                <li><Counter color="limegreen" /></li>
+                <li><Counter color={props.color} /></li>
             </ul>
         </div>
     );

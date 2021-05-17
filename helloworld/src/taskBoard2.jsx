@@ -7,12 +7,13 @@ const TaskBoard2 = () => {
     const handleChange = e => {
         const newValue = e.target.value;
         setValue(newValue);
+        setValue(e.target.value);
     }
 
     const addTask = () => {
         const newTask = [...taskList, value];
         setTaskList(newTask);
-        setTaskList([...taskList,value]); //(['','ddd','ssss'])
+        // setTaskList([...taskList,value]); //(['','ddd','ssss'])
         setValue("");
     };
 
