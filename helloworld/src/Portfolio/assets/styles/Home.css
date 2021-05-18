@@ -1,0 +1,369 @@
+html,body {height: 100%;}
+html {
+	scroll-behavior: smooth; /*スムーズにスクロールされる*/
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #776955;	/*全体の文字色*/
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 16px;	/*文字サイズ*/
+	line-height: 2;		/*行間*/
+	background: #faf7f3;	/*背景色*/
+	-webkit-text-size-adjust: 100%; /*縦横の文字サイズを自動調整*/
+}
+h1,h2,p,ul,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+ul {list-style-type: none;} /*リストのマーカーが表示されない*/
+img {border: thick double  #5fb3f5;max-width: 100%;height: auto;vertical-align: middle; border-radius: 50%;} /*イメージの枠*/
+iframe {width: 100%;}
+
+@keyframes opa1 {
+0% {opacity: 0;}
+100% {opacity: 1;}
+} 
+@keyframes floating {
+0% {transform: translate(0,0px);}
+100% {transform: translate(0,-15px);}
+}
+
+
+/*リンク（全般）設定*/
+
+a {
+	color: #776955;		/*リンクテキストの色*/
+	transition: 0.5s;	/*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
+}
+a:hover {
+	color: #ff47c2;			/*マウスオン時の文字色 */
+	text-decoration: none;	/*マウスオン時に下線を消す設定。*/
+}
+
+/*ヘッダー（一番上の、ロゴやメニューが入っているブロック）*/
+
+header {
+	height: 100%;
+	overflow:hidden;
+	position: relative;
+	background: radial-gradient(#ea96a3,#8fd2ed) fixed;
+}
+header #name {
+	text-align: center;
+	margin: 80px;
+	font-size: 25px;
+	color: #fff;	/*文字色*/
+	animation-name: opa1;
+	animation-delay: 0.7S;
+	animation-duration: 0.7S;
+	animation-fill-mode: both;
+
+}
+
+/*ロゴ画像*/
+
+header #logo img {
+	display: block;
+	width: 20%;	/*画像の幅*/
+	position: absolute;
+	left: 40%;		/*ロゴやメニューが入っているブロックに対して、左からの配置場所の指定。*/
+	bottom: 40%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
+	animation-name: opa1,floating;
+	animation-delay: 0.6S;
+	animation-fill-mode: both;
+
+    animation-timing-function: ease-in-out;
+	animation-iteration-count: 1,infinite;
+	animation-direction: alternate;
+	animation-duration: 0.6s,1.5s;
+}
+
+/*メニューブロック全体への指定*/
+
+#menubar {
+	position: absolute;
+	bottom: 20%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	font-size: 25px;
+}
+
+#menubar.m_fixed {
+	left: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: rgba(250, 161, 195, 0.9);        
+	opacity: 0.6;
+    -webkit-transition: all .4s ease 0s,background .6s ease .2s;
+    transition: all .4s ease 0s,background .6s ease .2s;
+    -webkit-overflow-scrolling: touch;
+    height: 42px;
+}
+
+/*メニュー１個あたりの指定*/
+
+#menubar li {
+	display: inline-block;
+	margin: 0 1%;
+	animation-name: opa1;
+	animation-delay: 0.8S;
+	animation-duration: 0.8S;
+	animation-fill-mode: both;
+}
+#menubar li a {
+	text-decoration: none;display: block;text-align: center;
+	width: 200px;	/*メニューの幅*/
+	color: #fff;	/*文字色*/
+	border-bottom: 2px solid transparent;	/*下線の幅、線種、色。transparentは透明の事。*/
+	padding-bottom: 7px;	/*下線と文字の間にとる余白*/
+}
+/*マウスオン時の指定*/
+#menubar li a:hover {
+	border-bottom: 2px solid #fff;	/*下線の幅、線種、色*/
+	letter-spacing: 3px;			/*文字間隔を少しだけ広くする指定。*/
+}
+
+/*コンテナー（headerとfooterをのぞくブロックを囲むブロック）*/
+
+#container { 
+	 max-width: 1400px;	/*最大幅。これ以上広くならない指定。*/
+	 margin: 0 auto; 
+} 
+
+/*コンテンツ（上のcontainerの中のブロック）*/
+
+#contents {
+	overflow: hidden;
+	padding: 50px 3%;
+}
+#contents section + section {
+	padding-top: 50px;
+}
+
+/*コンテンツ内にあるh2(見出し)タグの指定*/
+
+#contents h2 {
+	margin-bottom: 20px;
+	clear: both;
+	padding: 0 20px;
+	font-size: 25px;		/*文字サイズ*/
+	text-align: center;		/*文字をセンタリング*/
+	letter-spacing: 2px;	/*文字間隔を少しだけ広くする指定*/
+	background: #ea96a3;	/*背景色*/
+	color: #fff;			/*文字色*/
+	border-radius: 100px;	/*角を丸くする指定。*/
+}
+
+/*コンテンツ内にあるp(段落)タグ設定*/
+
+#contents p {
+	padding: 0px 20px 10px;	/*上、左右、下への余白*/
+}
+/*他。微調整。*/
+#contents p + p {
+	margin-top: -5px;
+}
+#contents h2 + p {
+	margin-top: -10px;
+}
+
+/*ブロック全体の設定*/
+
+dl {
+	padding-left: 20px;
+	margin-bottom: 15px;
+}
+
+/*見だし*/
+
+dt {
+	float: left;
+	width: 9em;
+	letter-spacing: 0.1em;
+}
+
+/*見出しの内容*/
+
+dd {
+	padding-left: 9em;
+}
+
+/*入力フォーム*/
+
+.Form {
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 720px;
+  }
+  @media screen and (max-width: 480px) {
+	.Form {
+	  margin-top: 40px;
+	}
+  }
+ .Form-Item {
+	border-top: 1px solid #ddd;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+  }
+  @media screen and (max-width: 480px) {
+	.Form-Item {
+	  padding-left: 14px;
+	  padding-right: 14px;
+	  padding-top: 16px;
+	  padding-bottom: 16px;
+	  flex-wrap: wrap;
+	}
+  }
+  .Form-Item:nth-child(5) {
+	border-bottom: 1px solid #ddd;
+  }
+  .Form-Item-Label {
+	width: 100%;
+	max-width: 248px;
+	letter-spacing: 0.05em;
+	font-weight: bold;
+	font-size: 18px;
+  }
+  @media screen and (max-width: 480px) {
+	.Form-Item-Label {
+	  max-width: inherit;
+	  display: flex;
+	  align-items: center;
+	  font-size: 15px;
+	}
+  }
+  .Form-Item-Label.isMsg {
+	margin-top: 8px;
+	margin-bottom: auto;
+  }
+  @media screen and (max-width: 480px) {
+	.Form-Item-Label.isMsg {
+	  margin-top: 0;
+	}
+  }
+  .Form-Item-Label-Required {
+	border-radius: 6px;
+	margin-right: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 48px;
+	display: inline-block;
+	text-align: center;
+	background: #ea96a3;
+	color: #fff;
+	font-size: 14px;
+  }
+  @media screen and (max-width: 480px) {
+	.Form-Item-Label-Required {
+	  border-radius: 4px;
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	  width: 32px;
+	  font-size: 10px;
+	}
+  }
+ .Form-Item-Input {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-left: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 48px;
+	flex: 1;
+	width: 100%;
+	max-width: 410px;
+	background: #eaedf2;
+	font-size: 18px;
+  }
+  @media screen and (max-width: 480px) {
+	.Form-Item-Input {
+	  margin-left: 0;
+	  margin-top: 18px;
+	  height: 40px;
+	  flex: inherit;
+	  font-size: 15px;
+	}
+  }
+  .Form-Item-Textarea {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-left: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 216px;
+	flex: 1;
+	width: 100%;
+	max-width: 410px;
+	background: #eaedf2;
+	font-size: 18px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  }
+  @media screen and (max-width: 480px) {
+	.Form-Item-Textarea {
+	  margin-top: 18px;
+	  margin-left: 0;
+	  height: 200px;
+	  flex: inherit;
+	  font-size: 15px;
+	}
+  }
+  .Form-Btn {
+	border-radius: 6px;
+	margin-top: 32px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 260px;
+	display: block;
+	letter-spacing: 0.05em;
+	background: #ea96a3;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  @media screen and (max-width: 480px) {
+	.Form-Btn {
+	  margin-top: 24px;
+	  padding-top: 8px;
+	  padding-bottom: 8px;
+	  width: 160px;
+	  font-size: 16px;
+	}
+  }
+  
+
+/*PAGE TOP（↑）設定*/
+
+#btn-backtotop{
+display: block;
+text-decoration: none;
+text-align: center;
+position: fixed;
+animation-duration: 1s;
+animation-fill-mode: forwards;
+width: 60px;		/*ボタンの幅*/
+line-height: 60px;	/*ボタンの高さ */
+bottom: 50px;		/*画面の下からの配置場所指定*/
+right: 3%;			/*画面の右からの配置場所指定*/
+background: rgba(30, 163, 204, 0.5);	/*背景色。0.5は色が50%出た状態の事。*/
+color: #fff;		/*文字色*/
+border-radius: 50%;	/*円形にする指定。*/
+opacity: 0; 
+@media screen and (max-width:767px){
+	bottom: 10px;
+	right: 5px;
+}}
+#btn-backtotop:hover {
+background: rgb(236, 166, 207,0.9);	/*マウスオン時の背景色*/
+} 
+#btn-backtotop.fadein {
+	opacity: 1;
+}
+

@@ -45,16 +45,16 @@ const Selection = () => {
   });
 
   const current_choice1 = current_data.map((data) => (
-    <li key={data.contents_detail_id}>{data.choice1}</li>
+    <li key={data.contents_detail_id} style={{listStyle:'none'}}>{data.choice1}</li>
   ));
   const current_choice2 = current_data.map((data) => (
-    <li key={data.contents_detail_id}>{data.choice2}</li>
+    <li key={data.contents_detail_id} style={{listStyle:'none'}}>{data.choice2}</li>
   ));
   const current_choice3 = current_data.map((data) => (
-    <li key={data.contents_detail_id}>{data.choice3}</li>
+    <li key={data.contents_detail_id} style={{listStyle:'none'}}>{data.choice3}</li>
   ));
   const current_choice4 = current_data.map((data) => (
-    <li key={data.contents_detail_id}>{data.choice4}</li>
+    <li key={data.contents_detail_id} style={{listStyle:'none'}}>{data.choice4}</li>
   ));
 
 // console.log(getData.length);
@@ -68,7 +68,7 @@ const Selection = () => {
       <Button variant="contained" onClick={e => handleClick(e, 4)}>{current_choice4}</Button>
       <Typography>
         {current_data.map((data) => (
-          <li key={data.contents_detail_id}>{data.contents_statement}</li>
+          <li key={data.contents_detail_id} style={{listStyle:'none'}}>{data.contents_statement}</li>
         ))}
         {/* <div style={{backgroundImage:{img}}}></div> */}
       </Typography>

@@ -13,16 +13,20 @@ import { Router } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 // import App from './Slide';
 // import * as serviceWorker from './serviceWorker';
+// eslint-disable-next-line
 import Sidebar from './Sidebar';
+import Home from './Portfolio/pages/Home';
+
 
 const hist = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={hist}>
-    <FrontC />
+    <Home />
+    {/* <FrontC /> */}
     {/* <GetData /> */}
     {/* <App /> */}
-    <Sidebar />
+    {/* <Sidebar /> */}
   </Router>,
   document.getElementById('root')
 );
