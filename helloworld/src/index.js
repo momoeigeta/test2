@@ -16,13 +16,14 @@ import { createBrowserHistory } from "history";
 // eslint-disable-next-line
 import Sidebar from './Sidebar';
 import Home from './Portfolio/pages/Home';
-
+// import Menubar from './Portfolio/pages/menubar';
 
 const hist = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={hist}>
     <Home />
+    {/* <Menubar /> */}
     {/* <FrontC /> */}
     {/* <GetData /> */}
     {/* <App /> */}
