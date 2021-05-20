@@ -6,8 +6,17 @@ import snowman from '../assets/images/snowman.jpg';
 // import './menubar';
 
 const Home = () => {
+
+    
+
+
+
+
+
     return (
         <div>
+                            <body className="body">
+
             <div className="Home">
                 <header className="header" style={{ height: 670 }}>
                     <h1 id="name">Momoe Igeta</h1>
@@ -83,8 +92,6 @@ const Home = () => {
           <textarea class="Form-Item-Textarea" id="test" placeholder="5文字以上" onChange="check()"></textarea>
           <p id="validation"></p>
  
- 
- 
         </div>
 
         <input type="submit" class="Form-Btn" value="Submit"></input>
@@ -105,8 +112,11 @@ const Home = () => {
 
 
                 </div>
+                
             </div>
+            </body>
         </div>
+        
     );
 }
 
