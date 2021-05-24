@@ -1,4 +1,6 @@
-html,body {height: 100%;}
+html,body {height: 100%;
+    user-select: none;
+}
 html {
 	scroll-behavior: smooth; /*スムーズにスクロールされる*/
 }
@@ -49,6 +51,8 @@ header {
 header #name {
 	text-align: center;
 	margin: 80px;
+	/* height: 80px; */
+	
 	font-size: 25px;
 	color: #fff;	/*文字色*/
 	animation-name: opa1;
@@ -56,6 +60,11 @@ header #name {
 	animation-duration: 0.7S;
 	animation-fill-mode: both;
 
+}
+
+header #canvas {
+    margin-right: -100px;
+	margin-top: -230px;
 }
 
 /*ロゴ画像*/

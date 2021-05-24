@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import '../assets/styles/Home.css';
 import './pagetop';
-// import './textvalue';
+import './Canvas';
 import snowman from '../assets/images/snowman.jpg';
 // import './menubar';
 
@@ -84,7 +84,7 @@ const Home = () => {
                                 <dt>自己紹介</dt>
                                 <dd><p>私は文系で未経験ですが、常に学ぶ姿勢を忘れずに基礎からしっかりと学び計画的に資格を取得するなど、少しずつですができることを増やしていきたいと考えています。
                                 学生時代にアルバイトやボランティアを経験し、誰かの支えになりたいという思いが芽生えました。
-            そして、社会の基盤といわれるインフラを支え、システムを通してお客様の役に立てるようになり、その結果として社会に貢献できる人材になりたいと考えています。</p></dd>
+                                そして、社会の基盤といわれるインフラを支え、システムを通してお客様の役に立てるようになり、その結果として社会に貢献できる人材になりたいと考えています。</p></dd>
                             </dl>
                         </section>
 
