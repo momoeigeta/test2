@@ -58,6 +58,12 @@ header #name {
 
 }
 
+header #canvas {
+    margin-right: -100px;
+	margin-top: -230px;
+}
+
+
 /*ロゴ画像*/
 
 header #logo img {
