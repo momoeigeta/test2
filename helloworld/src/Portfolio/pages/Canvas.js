@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 
 //canvas要素の取得
 
@@ -27,13 +27,13 @@ let animFrame = window.requestAnimationFrame ||
   };
 
 //canvasサイズを可変にする
-const canvas_resize =() => {
+// const canvas_resize =() => {
   let rswd_width = window.innerWidth;
   let rswd_height = window.innerHeight;
 
   canvas.setAttribute('width', rswd_width);
   canvas.setAttribute('height', rswd_height);
-}
+// }
 
 //乱数
 //min から max までの乱整数を返す関数
