@@ -23,7 +23,10 @@ import AppsIcon from '@material-ui/icons/Apps';
 
 import Slide from './Slide';
 // import CounterApp from './CounterApp';
-import taskBoard from './taskBoard2';
+import taskBoard2 from './taskBoard2';
+import frontC from './frontC';
+// import TaskBoard2 from './taskBoard2';
+import App from './views/App';
 
 const drawerWidth = 240;
 
@@ -116,7 +119,7 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <Typography variant="h6" noWrap >
             仮ヘッダー
           </Typography>
         </Toolbar>
@@ -137,28 +140,37 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-            <Link to="/slide" style={{boxShadow:'none',textDecoration:'none',color:'inherit',fontFamily:'montserrat, sans-serif'}}>
-            <ListItem　button>
-                <ListItemIcon><AppsIcon /></ListItemIcon>
-                <ListItemText primary="メニュー" />
+          <Link to="/slide" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
+            <ListItem button>
+              <ListItemIcon><AppsIcon /></ListItemIcon>
+              <ListItemText primary="メニュー" />
             </ListItem>
-            </Link>
+          </Link>
         </List>
         <Divider />
         <List>
-            <Link to="/slide" style={{boxShadow:'none',textDecoration:'none',color:'inherit',fontFamily:'montserrat, sans-serif'}}>
+          <Link to="/taskBoard2" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
             <ListItem button>
-                <ListItemIcon><SlideshowIcon /></ListItemIcon>
-                <ListItemText primary="個人情報研修" />
+              <ListItemIcon><SlideshowIcon /></ListItemIcon>
+              <ListItemText primary="タスクリスト・個人情報研修" />
             </ListItem>
-            </Link>
-            <Link to="/taskboard" style={{boxShadow:'none',textDecoration:'none',color:'inherit',fontFamily:'montserrat, sans-serif'}}>
+          </Link>
+          <Link to="/frontC" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
             <ListItem button>
-                <ListItemIcon><CreateIcon /></ListItemIcon>
-                <ListItemText primary="個人情報テスト" />
+              <ListItemIcon><CreateIcon /></ListItemIcon>
+              <ListItemText primary="個人情報テスト" />
             </ListItem>
-            </Link>
+          </Link>
+          <Link to="/App" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
+            <ListItem button>
+              <ListItemIcon><CreateIcon /></ListItemIcon>
+              <ListItemText primary="App" />
+            </ListItem>
+          </Link>
+
         </List>
+        <Divider />
+
       </Drawer>
       <main
         className={clsx(classes.content, {
@@ -167,7 +179,9 @@ export default function PersistentDrawerLeft() {
       >
         <div className={classes.drawerHeader} />
         <Route path="/slide" component={Slide} />
-        <Route path="/taskboard" component={taskBoard} />
+        <Route path="/taskBoard2" component={taskBoard2} />
+        <Route path="/frontC" component={frontC} />
+        <Route path="/App" component={App} />
 
       </main>
     </div>

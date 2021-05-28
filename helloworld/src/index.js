@@ -1,36 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// eslint-disable-next-line
-import App from './views/App';
-// eslint-disable-next-line
-import GetData from './GetData';
-// eslint-disable-next-line
-import FrontC from './frontC';
+// import App from './views/App';
+// import GetData from './GetData';
+// import FrontC from './frontC';
 
 import reportWebVitals from './reportWebVitals';
 import { Router } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 // import App from './Slide';
 // import * as serviceWorker from './serviceWorker';
-// eslint-disable-next-line
+
 import Sidebar from './Sidebar';
-import Home from './Portfolio/pages/Home';
+// import Home from './Portfolio/pages/Home';
 // import Menubar from './Portfolio/pages/menubar';
 
 
 const hist = createBrowserHistory();
 
 ReactDOM.render(
-  <Router history={hist}>
-    <Home />
-    {/* <Menubar /> */}
-    {/* <FrontC /> */}
-    {/* <GetData /> */}
-    {/* <App /> */}
-    {/* <Sidebar /> */}
-  </Router>,
-  document.getElementById('root')
+    <Router history={hist} >
+        <Sidebar />
+        {/* <FrontC /> */}
+        {/* <Home /> */}
+        {/* <Menubar /> */}
+        {/* <GetData /> */}
+        {/* <App /> */}
+    </Router>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

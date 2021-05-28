@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 const Slide = () => {
+
+  const [value, setValue] = useState("");
+
+  setValue.style.visibility ="hidden";
+
   const showMessage = () => {
-    alert(`Hello!`);
+    if (setValue.style.visibility === "visible") {
+      setValue.style.visibility = "hidden";
+    }else {
+        setValue(`Hello!`);
+      }
   }
   return (
-    <div className="App" id="root" onClick={showMessage}>
-      HelloReact!
+    <div>
+      <div className="App" id="root" onClick={showMessage}>
+        HelloReact!
+    </div>
+      <div>
+          {value}
+      </div>
     </div>
   );
 }

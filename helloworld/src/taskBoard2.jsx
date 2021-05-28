@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './CSS/CounterApp.css';
 
 const TaskBoard2 = () => {
     const [taskList, setTaskList] = useState([]);
@@ -22,15 +23,15 @@ const TaskBoard2 = () => {
             <div>
                 <h1>タスクリスト</h1>
                 <input type="text" value={value} onChange={e => handleChange(e)} />
-                <button onClick={addTask}>追加</button>
+                <button className="Form-Btn" onClick={addTask}>追加</button>
                 <p>{value}</p>
             </div>
             <div>
-                <ul>
+                {/* <ul> */}
                     {taskList.map((task, index) => (
-                        <li key={index}>{task}</li>
+                        <li style={{ listStyle: 'none' }} key={index}>{task}</li>
                     ))}
-                </ul>
+                {/* </ul> */}
             </div>
         </div>
     );
