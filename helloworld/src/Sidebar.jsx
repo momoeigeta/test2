@@ -24,9 +24,11 @@ import AppsIcon from '@material-ui/icons/Apps';
 import Slide from './Slide';
 // import CounterApp from './CounterApp';
 import taskBoard2 from './taskBoard2';
-import frontC from './frontC';
+// import frontC from './frontC';
 // import TaskBoard2 from './taskBoard2';
 import App from './views/App';
+import frontCTest from './frontCTest';
+
 
 const drawerWidth = 240;
 
@@ -155,18 +157,28 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary="タスクリスト・個人情報研修" />
             </ListItem>
           </Link>
-          <Link to="/frontC" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
+          {/* <Link to="/frontC" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
             <ListItem button>
               <ListItemIcon><CreateIcon /></ListItemIcon>
               <ListItemText primary="個人情報テスト" />
             </ListItem>
-          </Link>
+          </Link> */}
           <Link to="/App" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
             <ListItem button>
               <ListItemIcon><CreateIcon /></ListItemIcon>
               <ListItemText primary="App" />
             </ListItem>
           </Link>
+          <Link to="/frontCTest" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
+            <ListItem button>
+              <ListItemIcon><CreateIcon /></ListItemIcon>
+              <ListItemText primary="frontCTest" />
+            </ListItem>
+          </Link>
+
+          
+
+
 
         </List>
         <Divider />
@@ -180,8 +192,9 @@ export default function PersistentDrawerLeft() {
         <div className={classes.drawerHeader} />
         <Route path="/slide" component={Slide} />
         <Route path="/taskBoard2" component={taskBoard2} />
-        <Route path="/frontC" component={frontC} />
+        {/* <Route path="/frontC" component={frontC} /> */}
         <Route path="/App" component={App} />
+        <Route path="/frontCTest" component={frontCTest} />
 
       </main>
     </div>

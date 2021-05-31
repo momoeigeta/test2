@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 // eslint-disable-next-line
+// import { getData } from './variables/data';
 import { getData } from './variables/data';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -32,7 +33,7 @@ const Selection = () => {
 
   const answer = current_data.map((data) => (
     <li key={data.contents_detail_id}>{data.answer}</li>))
-  
+
   // getData.map((data) => (<li key={data.contents_detail_id}>{data.answer}</li>))
   // const answer = 3;
   // eslint-disable-next-line
@@ -80,13 +81,13 @@ const Selection = () => {
         {/* <div style={{backgroundImage:{img}}}></div> */}
       </Typography>
 
-      <Button style={{margin: '20px 0'}} variant="contained" onClick={e => handleClick(e, 1)}>{current_choice1}</Button>
+      <Button style={{ margin: '20px 0' }} variant="contained" onClick={e => handleClick(e, 1)}>{current_choice1}</Button>
       <Button variant="contained" onClick={e => handleClick(e, 2)}>{current_choice2}</Button>
       <Button variant="contained" onClick={e => handleClick(e, 3)}>{current_choice3}</Button>
       <Button variant="contained" onClick={e => handleClick(e, 4)}>{current_choice4}</Button>
       <p>{correctness}</p>
 
-      <Pagination style={{display: 'inline-block'}} count={getData.length} page={page} onChange={handleChange} />
+      <Pagination style={{ display: 'inline-block' }} count={getData.length} page={page} onChange={handleChange} />
     </div>
   );
 }
