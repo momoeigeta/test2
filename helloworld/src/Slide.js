@@ -5,14 +5,14 @@ const Slide = () => {
 
   const [value, setValue] = useState("");
 
-  setValue.style.visibility ="hidden";
+  // setValue.style.visibility = "hidden";
 
   const showMessage = () => {
-    if (setValue.style.visibility === "visible") {
-      setValue.style.visibility = "hidden";
-    }else {
-        setValue(`Hello!`);
-      }
+    // if (setValue.style.visibility === "visible") {
+    //   setValue.style.visibility = "hidden";
+    // }else {
+    setValue(`Hello!`);
+    // }
   }
   return (
     <div>
@@ -20,7 +20,7 @@ const Slide = () => {
         HelloReact!
     </div>
       <div>
-          {value}
+        {value}
       </div>
     </div>
   );

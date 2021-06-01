@@ -28,6 +28,8 @@ import taskBoard2 from './taskBoard2';
 // import TaskBoard2 from './taskBoard2';
 import App from './views/App';
 import frontCTest from './frontCTest';
+import GetData from './GetData';
+
 
 
 const drawerWidth = 240;
@@ -157,12 +159,12 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary="タスクリスト・個人情報研修" />
             </ListItem>
           </Link>
-          {/* <Link to="/frontC" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
+          <Link to="/GetData" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
             <ListItem button>
               <ListItemIcon><CreateIcon /></ListItemIcon>
               <ListItemText primary="個人情報テスト" />
             </ListItem>
-          </Link> */}
+          </Link>
           <Link to="/App" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
             <ListItem button>
               <ListItemIcon><CreateIcon /></ListItemIcon>
@@ -176,7 +178,7 @@ export default function PersistentDrawerLeft() {
             </ListItem>
           </Link>
 
-          
+
 
 
 
@@ -192,7 +194,7 @@ export default function PersistentDrawerLeft() {
         <div className={classes.drawerHeader} />
         <Route path="/slide" component={Slide} />
         <Route path="/taskBoard2" component={taskBoard2} />
-        {/* <Route path="/frontC" component={frontC} /> */}
+        <Route path="/GetData" component={GetData} />
         <Route path="/App" component={App} />
         <Route path="/frontCTest" component={frontCTest} />
 

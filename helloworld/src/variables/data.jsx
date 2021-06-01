@@ -1,16 +1,5 @@
-    
-
+export const getData =
 [
-       
-
-
-
-
-
-
-
-
-
     {
         "contents_id": 1,
         "contents_detail_id": 1,
@@ -20,12 +9,8 @@
         "choice2": "電話番号",
         "choice3": "住所",
         "choice4": "勤務先",
-        "answer": "choice3"
+        "answer": 3
     },
-
-
-
-
     {
         "contents_id": 2,
         "contents_detail_id": 2,
@@ -49,4 +34,3 @@
         "answer": 3
     }
 ]
-
