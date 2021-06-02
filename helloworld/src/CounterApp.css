@@ -29,8 +29,14 @@ body {
 }
 div {
     text-align: center;
+    list-style: none;
+
 }
 
 .Typography {
     text-align: center;
+}
+
+main {
+    list-style: none;
 }

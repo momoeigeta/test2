@@ -3,6 +3,10 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     margin: 20px auto;
+    list-style: none;
+    text-align: center;
+
+
 }
 
 .container {
