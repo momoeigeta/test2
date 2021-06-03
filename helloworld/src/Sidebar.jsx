@@ -27,8 +27,9 @@ import taskBoard2 from './taskBoard2';
 // import frontC from './frontC';
 // import TaskBoard2 from './taskBoard2';
 import App from './views/App';
-import frontCTest from './frontCTest';
+import frontCTest from './views/frontCTest';
 import GetData from './GetData';
+// import Home from './Portfolio/pages/Home';
 
 
 
@@ -107,10 +108,11 @@ export default function PersistentDrawerLeft() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar
+      <AppBar 
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
+          
         })}
       >
         <Toolbar>
@@ -119,12 +121,12 @@ export default function PersistentDrawerLeft() {
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            className={clsx(classes.menuButton, open && classes.hide)}
+            className={clsx(classes.menuButton, open && classes.hide)}            
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton >
           <Typography variant="h6" noWrap >
-            仮ヘッダー
+              仮ヘッダー
           </Typography>
         </Toolbar>
       </AppBar>
@@ -162,7 +164,7 @@ export default function PersistentDrawerLeft() {
           <Link to="/GetData" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
             <ListItem button>
               <ListItemIcon><CreateIcon /></ListItemIcon>
-              <ListItemText primary="個人情報テスト" />
+              <ListItemText primary="GetData" />
             </ListItem>
           </Link>
           <Link to="/App" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
@@ -178,6 +180,13 @@ export default function PersistentDrawerLeft() {
             </ListItem>
           </Link>
 
+          {/* <Link to="/Home" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
+            <ListItem button>
+              <ListItemIcon><CreateIcon /></ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItem>
+          </Link>
+ */}
 
 
 
@@ -197,6 +206,7 @@ export default function PersistentDrawerLeft() {
         <Route path="/GetData" component={GetData} />
         <Route path="/App" component={App} />
         <Route path="/frontCTest" component={frontCTest} />
+        {/* <Route path="/Home" component={Home} /> */}
 
       </main>
     </div>
