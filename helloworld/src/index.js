@@ -11,8 +11,8 @@ import { createBrowserHistory } from "history";
 // import App from './Slide';
 // import * as serviceWorker from './serviceWorker';
 
-import Sidebar from './Sidebar';
-// import Home from './Portfolio/pages/Home';
+// import Sidebar from './Sidebar';
+import Home from './Portfolio/pages/Home';
 // import Menubar from './Portfolio/pages/menubar';
 
 
@@ -20,9 +20,9 @@ const hist = createBrowserHistory();
 
 ReactDOM.render(
     <Router history={hist} >
-        <Sidebar />
+        {/* <Sidebar /> */}
         {/* <FrontC /> */}
-        {/* <Home /> */}
+        <Home />
         {/* <Menubar /> */}
         {/* <GetData /> */}
         {/* <App /> */}
