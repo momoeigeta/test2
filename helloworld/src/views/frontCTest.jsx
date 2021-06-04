@@ -30,44 +30,10 @@ const Selection = () => {
         <li key={data.contents_detail_id}>{data.answer}</li>
     ));
 
-
-    // const question = CurrentData.map((data) => (
-    //     <li key={data.contents_detail_id}>{data.contents_statement}</li>
-    // ));
-    // const choice1 = CurrentData.map((data) => (
-    //     <li key={data.contents_detail_id}>{data.choice1}</li>
-    // ));
-    // const choice2 = CurrentData.map((data) => (
-    //     <li key={data.contents_detail_id}>{data.choice2}</li>
-    // ));
-    // const choice3 = CurrentData.map((data) => (
-    //     <li key={data.contents_detail_id}>{data.choice3}</li>
-    // ));
-
-    // // const answer = 2;
-
-
-
-    // const handleClick = (selected) => {
-    //     if (selected === props.answer[0].props.children) {
-    //         setCorrectness("正解です！");
-    //     } else {
-    //         setCorrectness("不正解です！");
-    //     }
-    // }
-
-
-
-
     const handleChange = (event, value) => {
         setPage(value);
     };
 
-    // console.log(getData.length);
-
-    // const question = CurrentData.map((data) => (
-    //     <li key={data.contents_detail_id}>{data.contents_statement}</li>
-    // ));
     const CurrentChoice1 = CurrentData.map((data) => (
         <li key={data.contents_detail_id}>{data.choice1}</li>
     ));
@@ -80,7 +46,6 @@ const Selection = () => {
     const CurrentChoice4 = CurrentData.map((data) => (
         <li key={data.contents_detail_id}>{data.choice4}</li>
     ));
-
 
     return (
         <div className={classes.root}>

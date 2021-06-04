@@ -180,13 +180,6 @@ export default function PersistentDrawerLeft() {
             </ListItem>
           </Link>
 
-          {/* <Link to="/Home" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
-            <ListItem button>
-              <ListItemIcon><CreateIcon /></ListItemIcon>
-              <ListItemText primary="Home" />
-            </ListItem>
-          </Link>
- */}
 
 
 
@@ -206,7 +199,6 @@ export default function PersistentDrawerLeft() {
         <Route path="/GetData" component={GetData} />
         <Route path="/App" component={App} />
         <Route path="/frontCTest" component={frontCTest} />
-        {/* <Route path="/Home" component={Home} /> */}
 
       </main>
     </div>

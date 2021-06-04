@@ -13,6 +13,11 @@ const Slide = () => {
     // }else {
     setValue(`Hello!`);
     // }
+
+
+
+
+    
   }
   return (
     <div>
@@ -22,6 +27,8 @@ const Slide = () => {
       <div>
         {value}
       </div>
+
+
     </div>
   );
 }

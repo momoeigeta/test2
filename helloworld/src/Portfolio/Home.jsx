@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Form from "./Form";
-import Menubar from "./Menubar";
-import About from "./About";
-import Contact from "./Contact";
-import Pagetop from '../layouts/Pagetop';
-import Canvas from '../layouts/Canvas';
+import Form from "./pages/Form";
+import Menubar from "./pages/Menubar";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Pagetop from './layouts/Pagetop';
+import Canvas from './layouts/Canvas';
 
-import snowman from '../assets/images/snowman.jpg';
-import '../assets/styles/Home.css';
+import snowman from './assets/images/snowman.jpg';
+import './assets/styles/Home.css';
 
 const Home = () => {
 
