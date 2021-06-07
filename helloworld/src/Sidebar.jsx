@@ -194,6 +194,9 @@ export default function PersistentDrawerLeft() {
         })}
       >
         <div className={classes.drawerHeader} />
+        {/* <Typography paragraph>
+          あいうえお
+        </Typography> */}
         <Route path="/slide" component={Slide} />
         <Route path="/taskBoard2" component={taskBoard2} />
         <Route path="/GetData" component={GetData} />
