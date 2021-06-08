@@ -1,3 +1,4 @@
+import { Button } from '@material-ui/core';
 import React, { useState } from 'react';
 import './App.css';
 
@@ -5,30 +6,26 @@ const Slide = () => {
 
   const [value, setValue] = useState("");
 
-  // setValue.style.visibility = "hidden";
 
   const showMessage = () => {
-    // if (setValue.style.visibility === "visible") {
-    //   setValue.style.visibility = "hidden";
-    // }else {
-    setValue(`Hello!`);
-    // }
-
-
-
-
-    
+    let div = document.getElementById("view");
+    let state = div.style.display;
+    if (state === "none") {
+      setValue(`Hello!`);
+      div.setAttribute("style", "display:inline");
+    } else {
+      div.setAttribute("style", "display:none");
+    }
   }
+
   return (
     <div>
-      <div className="App" id="root" onClick={showMessage}>
+      <button className="App" id="root" onClick={showMessage} style={{userSelect: 'none'}}>
         HelloReact!
-    </div>
-      <div>
+    </button>
+      <div id="view" style={{ display: 'none', userSelect: 'none'}} >
         {value}
       </div>
-
-
     </div>
   );
 }
