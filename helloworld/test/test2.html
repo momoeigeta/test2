@@ -1,96 +1,46 @@
 <!DOCTYPE HTML>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <style>
-        table {
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            border: 1px solid black;
-            padding: 4px;
-        }
-
-        th {
-            cursor: pointer;
-        }
-
-        th:hover {
-            background: yellow;
-        }
-    </style>
-</head>
-
 <body>
 
-    <table id="grid">
-        <thead>
-            <tr>
-                <th data-type="number">Age</th>
-                <th data-type="string">Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>5</td>
-                <td>John</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Pete</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>Ann</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>Eugene</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Ilya</td>
-            </tr>
-        </tbody>
-    </table>
+    <p>Press "Q" and "W" together (can be in any language).</p>
 
     <script>
+        function runOnKeys(func, ...codes) {
+            let pressed = new Set();
 
-        grid.onclick = (e) => {
-            if (e.target.tagName != "TH") return;
+            document.addEventListener("keydown", function (event) {
+                pressed.add(event.code);
 
-            let th = e.target;
+                for (let code of codes) {
+                    if (!pressed.has(code)) {
+                        return;
+                    }
+                }
 
-            sortGrid(th.cellIndex, th.dataset.type);
-        };
 
-        const sortGrid = (colNum, type) => {
-            let tbody = grid.querySelector("tbody");
 
-            let rowsArray = Array.from(tbody.rows);
 
-            let compare;
 
-            switch (type) {
-                case "number":
-                    compare = (rowA, rowB) => {
-                        return rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML;
-                    };
-                    break;
-                case "string":
-                    compare = (rowA, rowB) => {
-                        return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML ? 1 : -1;
-                    };
-                    break;
-            }
 
-            rowsArray.sort(compare);
 
-            tbody.append(...rowsArray);
+
+                pressed.clear();
+
+                func();
+            });
+
+            document.addEventListener("keyup", function (event) {
+                pressed.delete(event.code);
+            });
         }
+
+
+        runOnKeys(
+            () => alert("Hello!"),
+            "KeyQ",
+            "KeyW"
+        );
     </script>
 </body>
 
