@@ -5,16 +5,19 @@ body {
   
   ol, ul {
     padding-left: 30px;
+
   }
   
   .board-row:after {
     clear: both;
     content: "";
     display: table;
+
   }
   
   .status {
     margin-bottom: 10px;
+
   }
   
   .square {
@@ -28,12 +31,13 @@ body {
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
-    text-align: center;
     width: 34px;
+
   }
   
   .square:focus {
     outline: none;
+
   }
   
   .square-highlight {
@@ -47,23 +51,30 @@ body {
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
-    text-align: center;
     width: 34px;
+
   }
   .kbd-navigation .square:focus {
     background: #ddd;
+
   }
   
   .game {
     display: flex;
     flex-direction: row;
+
   }
   
   .game-info {
     margin-left: 20px;
+
   }
 
   .bold {
     font-weight: bold;
+
   }
-  
+
+div {
+  text-align: center;
+}  

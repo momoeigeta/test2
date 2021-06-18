@@ -8,7 +8,8 @@ const San = () => {
         const className = isHighlight ? 'square-highlight' : 'square';
         return (
             <button className={className}
-                onClick={() => onClick()}>
+                onClick={() => onClick()}
+            >
                 {value}
             </button>
         );
@@ -81,7 +82,7 @@ const San = () => {
             setStepNumber(step);
             setXIsNext(step % 2 === 0);
         };
-        // const _history = history;
+
         const current = history[stepNumber];
         const { winner, winLine, isDraw } = calculateWinner(current.squares);
         let status;
@@ -115,7 +116,15 @@ const San = () => {
         }
 
         return (
-            <div className="game">
+            <div className="game"
+                style={{
+                    // margin: 'auto',
+                    // width: '21%'
+                    position: 'absolute', 
+                    left: '40%', 
+                    top: '10%',
+                    // transform: 'translate(-50%, -50%)'
+                }}>
                 <div className="game-board">
                     <Board
                         squares={current.squares}
