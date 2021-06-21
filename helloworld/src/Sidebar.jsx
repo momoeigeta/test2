@@ -30,6 +30,7 @@ import App from './views/App';
 import frontCTest from './views/frontCTest';
 import GetData from './GetData';
 // import Home from './Portfolio/pages/Home';
+import San from './tutorial/San';
 
 
 
@@ -179,6 +180,12 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary="frontCTest" />
             </ListItem>
           </Link>
+          <Link to="/San" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
+            <ListItem button>
+              <ListItemIcon><CreateIcon /></ListItemIcon>
+              <ListItemText primary="San" />
+            </ListItem>
+          </Link>
 
 
 
@@ -202,6 +209,7 @@ export default function PersistentDrawerLeft() {
         <Route path="/GetData" component={GetData} />
         <Route path="/App" component={App} />
         <Route path="/frontCTest" component={frontCTest} />
+        <Route path="/San" component={San} />
 
       </main>
     </div>

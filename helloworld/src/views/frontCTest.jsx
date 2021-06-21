@@ -49,10 +49,10 @@ const Selection = () => {
 
     return (
         <div className={classes.root}>
-            <Card>
+            <Card style={{fontSize: "20px"}}>
                 {CurrentData.map((data) => (
                     <Questions key={data.contents_detail_id}
-                        contents={data.contents_statement} />
+                        contents={data.contents_statement}/>
                 ))}
             </Card>
             {CurrentData.map((data) => (

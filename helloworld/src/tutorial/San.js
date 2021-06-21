@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import './index.css';
 
 const San = () => {
@@ -179,10 +179,10 @@ const San = () => {
 
     // ========================================
 
-    ReactDOM.render(
-        <Game />,
-        document.getElementById('root')
-    );
+    // ReactDOM.render(
+    //     <Game />,
+    //     document.getElementById('root')
+    // );
 
     return null;
 
