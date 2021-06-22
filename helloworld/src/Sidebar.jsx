@@ -30,7 +30,7 @@ import App from './views/App';
 import frontCTest from './views/frontCTest';
 import GetData from './GetData';
 // import Home from './Portfolio/pages/Home';
-import San from './tutorial/San';
+import Game from './tutorial/San';
 
 
 
@@ -180,10 +180,10 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary="frontCTest" />
             </ListItem>
           </Link>
-          <Link to="/San" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
+          <Link to="/Game" style={{ boxShadow: 'none', textDecoration: 'none', color: 'inherit', fontFamily: 'montserrat, sans-serif' }}>
             <ListItem button>
               <ListItemIcon><CreateIcon /></ListItemIcon>
-              <ListItemText primary="San" />
+              <ListItemText primary="Game" />
             </ListItem>
           </Link>
 
@@ -209,7 +209,7 @@ export default function PersistentDrawerLeft() {
         <Route path="/GetData" component={GetData} />
         <Route path="/App" component={App} />
         <Route path="/frontCTest" component={frontCTest} />
-        <Route path="/San" component={San} />
+        <Route path="/Game" component={Game} />
 
       </main>
     </div>

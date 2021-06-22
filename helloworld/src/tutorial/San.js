@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import './index.css';
 
-const San = () => {
+// const San = () => {
 
     const Square = ({ value, onClick, isHighlight }) => {
         const className = isHighlight ? 'square-highlight' : 'square';
@@ -121,8 +121,8 @@ const San = () => {
                     // margin: 'auto',
                     // width: '21%'
                     position: 'absolute', 
-                    left: '40%', 
-                    top: '10%',
+                    left: '50%', 
+                    top: '30%',
                     // transform: 'translate(-50%, -50%)'
                 }}>
                 <div className="game-board">
@@ -179,12 +179,12 @@ const San = () => {
 
     // ========================================
 
-    // ReactDOM.render(
-    //     <Game />,
-    //     document.getElementById('root')
-    // );
+    ReactDOM.render(
+        <Game />,
+        document.getElementById('root')
+    );
 
-    return null;
+//     return null;
 
-};
-export default San;
+// };
+export default Game;
