@@ -10,19 +10,23 @@ import { Router } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 // import * as serviceWorker from './serviceWorker';
 
-import Sidebar from './Sidebar';
+// import Sidebar from './Sidebar';
 // import Home from './Portfolio/Home';
-// import San from './tutorial/San';
+import Home2 from './HPMockUp/Home2';
+
+
+
 
 
 const hist = createBrowserHistory();
 
 ReactDOM.render(
     <Router history={hist} >
-        {/* <San /> */}
-        <Sidebar />
-        {/* <FrontC /> */}
         {/* <Home /> */}
+        <Home2 />
+
+        {/* <Sidebar /> */}
+        {/* <FrontC /> */}
         {/* <Menubar /> */}
         {/* <GetData /> */}
         {/* <App /> */}
