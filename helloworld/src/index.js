@@ -12,8 +12,9 @@ import { createBrowserHistory } from "history";
 
 // import Sidebar from './Sidebar';
 // import Home from './Portfolio/Home';
-import Home2 from './HPMockUp/Home2';
-
+// import Home2 from './HPMockUp/Home2';
+// import Slide from './Slide';
+import App from './HPMockUp/App';
 
 
 
@@ -23,13 +24,13 @@ const hist = createBrowserHistory();
 ReactDOM.render(
     <Router history={hist} >
         {/* <Home /> */}
-        <Home2 />
-
+        {/* <Home2 /> */}
+        {/* <Slide /> */}
         {/* <Sidebar /> */}
         {/* <FrontC /> */}
         {/* <Menubar /> */}
         {/* <GetData /> */}
-        {/* <App /> */}
+        <App />
     </Router>,
     document.getElementById('root')
 );

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Contact.css';
 
 const Header = () => {
@@ -10,8 +10,7 @@ const Header = () => {
                 <h1>お問い合わせ</h1>
             </div>
         </header>
-
-    )
+    );
 };
 
 export default Header;
