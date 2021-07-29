@@ -16,6 +16,8 @@ import { createBrowserHistory } from "history";
 // import Slide from './Slide';
 import App from './HPMockUp/App';
 
+import Local from './Local';
+
 
 
 
@@ -30,7 +32,8 @@ ReactDOM.render(
         {/* <FrontC /> */}
         {/* <Menubar /> */}
         {/* <GetData /> */}
-        <App />
+        {/* <App /> */}
+        <Local />
     </Router>,
     document.getElementById('root')
 );
